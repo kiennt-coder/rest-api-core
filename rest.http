@@ -1,0 +1,43 @@
+GET http://localhost:3000/
+
+### Get User list
+
+GET http://localhost:3000/v1/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDAyM2NiOTNhNzUyYWIwNDJkZWExODAiLCJpYXQiOjE2NzgyMTMwMTMsImV4cCI6MTY3ODIxMzMxM30.LImKyaANOEIWw6xd6lb_vVrljKAC-6k1D3GGWiI8ngk
+
+### Register account
+
+POST http://localhost:3000/v1/user/register
+Content-Type: application/json
+
+{
+    "email": "kiennt.coder@gmail.com",
+    "password": "kmnkmn123"
+}
+### Refresh token
+
+POST http://localhost:3000/v1/user/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDAyM2NiOTNhNzUyYWIwNDJkZWExODAiLCJpYXQiOjE2NzgxMjYwMzcsImV4cCI6MTcwOTY4MzYzN30.PH9JAi1q0ZtDcWF7hbXfi_uhTRDabhaA9Q0NkGbFNqk"
+}
+
+### Login
+
+POST http://localhost:3000/v1/user/login
+Content-Type: application/json
+
+{
+    "email": "kiennt.coder@gmail.com",
+    "password": "kmnkmn123"
+}
+
+### Logout
+
+POST http://localhost:3000/v1/user/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDAyM2NiOTNhNzUyYWIwNDJkZWExODAiLCJpYXQiOjE2NzgxMjYwMzcsImV4cCI6MTcwOTY4MzYzN30.PH9JAi1q0ZtDcWF7hbXfi_uhTRDabhaA9Q0NkGbFNqk"
+}
